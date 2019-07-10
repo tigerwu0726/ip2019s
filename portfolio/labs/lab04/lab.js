@@ -39,12 +39,12 @@ $(function() {
     var frist = '';
     var second = '';
     $('#issue').on('click',function(){
-        flip = $('#il').val();
+        flip = $('#i1').val();
 $(this).removeClass("back");
 update();
 $(this).addClass("selected");
 if (flip == 0) {
-    $('#il').val(1);
+    $('#i1').val(1);
     $('#i4').val(this.id);
     if ($(this).hasClass("club")) {
         frist = 'club';
@@ -57,7 +57,7 @@ if (flip == 0) {
     }
     $('#i2').val(frist);
 }else if (flip == 1) {
-   $('#il').val(2);
+   $('#i1').val(2);
     $('#i5').val(this.id);
     if ($(this).hasClass("club")) {
     second = 'club';
@@ -70,8 +70,8 @@ if (flip == 0) {
     }
     $('#i3').val(second); 
     
-        var myid1 = "#" + $('#i4').val();
-        var.myid2 =  '#' + $('#i5').val();'
+        var myid1 = '#' + $('#i4').val();
+        var myid2 =  '#' + $('#i5').val();
     if (frist==second) {
         setTimeout(function(){
             $(myid1).addClass('done');
@@ -106,4 +106,4 @@ if (flip == 0) {
     update();
 });
 
-
+});

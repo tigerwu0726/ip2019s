@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="512" width="512">
+
+  <rect width="512" height="512" stroke="red" fill="white"/>
+
+  <path d="
+    M206 114
+    C
+    237 53 417 13 410 99 
+    402 212 357 236 272 221 
+    202 209 186 151 206 114z" fill="none" stroke="#000" stroke-width="1px"/>
+
+  <circle fill="Lavender" stroke="#f0f" cx="206" cy="114" r="16" opacity="0.2">
+    <animate attributeName="opacity" to="1" begin="0s" dur="2s" fill="freeze" repeatCount="0" />
+  </circle>
+
+</svg>

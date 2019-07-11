@@ -3,16 +3,16 @@ function issueCard() {
 for (var i = 1; i <= 16; i++) {
     var r = Math.floor((Math.random()*4));
     switch (r) {
-        case 0: $('#d2').append('<img id = "img'+ i +'"class= "issue club">');
+        case 0: $('#d2').append('<img id="img'+ i +'" class="issue club">');
                 $('#d3').append('<img class="ref clud">');
             break;
-        case 1: $('#d2').append('<img id = "img'+ i +'"class= "issue diamonds">');
+        case 1: $('#d2').append('<img id="img'+ i +'" class="issue diamonds">');
                 $('#d3').append('<img class="ref diamonds">');
             break;
-        case 2: $('#d2').append('<img id = "img'+ i +'"class= "issue hearts">');
+        case 2: $('#d2').append('<img id="img'+ i +'" class="issue hearts">');
                 $('#d3').append('<img class="ref hearts">');
             break;
-        case 3: $('#d2').append('<img id = "img'+ i +'"class= "issue spades">');
+        case 3: $('#d2').append('<img id="img'+ i +'" class="issue spades">');
                 $('#d3').append('<img class="ref spades">');
             break;
     }
@@ -35,41 +35,43 @@ $(function() {
         $('.issue').addClass("back");
         update();
 });
+
     flip = 0;
     var frist = '';
     var second = '';
-    $('#issue').on('click',function(){
+
+$('.issue').on('click',function(){
         flip = $('#i1').val();
-$(this).removeClass("back");
-update();
-$(this).addClass("selected");
-if (flip == 0) {
-    $('#i1').val(1);
-    $('#i4').val(this.id);
-    if ($(this).hasClass("club")) {
-        frist = 'club';
-    }else if ($(this).hasClass("diamonds")) {
-    frist = 'diamonds' ;       
-    }else if ($(this).hasClass("hearts")) {
-        frist = 'hearts';
-    }else{
-        frist = 'spades';
-    }
-    $('#i2').val(frist);
-}else if (flip == 1) {
-   $('#i1').val(2);
-    $('#i5').val(this.id);
+        $(this).removeClass("back");
+        update();
+        $(this).addClass("selected");
+        if (flip == 0) {
+            $('#i1').val(1);
+            $('#i4').val(this.id);
+            if ($(this).hasClass("club")) {
+                frist = 'club';
+            }else if ($(this).hasClass("diamonds")) {
+                frist = 'diamonds' ;
+            }else if ($(this).hasClass("hearts")) {
+                frist = 'hearts';
+            }else{
+                frist = 'spades';
+            }
+        $('#i2').val(frist);
+        }else if (flip == 1) {
+            $('#i1').val(2);
+            $('#i5').val(this.id);
     if ($(this).hasClass("club")) {
     second = 'club';
     }else if ($(this).hasClass("diamonds")) {
-    second = 'diamonds' ;       
+    second = 'diamonds' ;
     }else if ($(this).hasClass("hearts")) {
     second = 'hearts';
     }else{
     second = 'spades';
     }
-    $('#i3').val(second); 
-    
+    $('#i3').val(second);
+
         var myid1 = '#' + $('#i4').val();
         var myid2 =  '#' + $('#i5').val();
     if (frist==second) {
